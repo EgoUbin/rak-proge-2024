@@ -4,14 +4,17 @@ const Counter = () => {
   const [counter, setCounter] = useState(0)
   // const [counter, setCounter] = React.useState(0);
 
-  const modifyCounter = () => setCounter(prevCounter => prevCounter + 1)
+  const modifyCounter = (amount) => setCounter(prevCounter => prevCounter + amount)
+
+  const counterArray = [+1, +5, +50, -1, -5, -50];
 
   return (
     <>
       <h1>{counter}</h1>
 
-      {[+1, +5, +50, -1, -5, -50].map(element => (
-        <button onClick={modifyCounter}>sync {element}</button>
+      {counterArray.map(element => (
+       
+        <button onClick={() => modifyCounter(element)}>sync {(element)}</button>
       ))}
 
       <button onClick={() => setTimeout(() => modifyCounter(), 2000)}>
