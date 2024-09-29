@@ -11,25 +11,28 @@ import "./App.css"
 function App() {
   return (
     <div style={{ backgroundColor: "#282c24" }}>
-      <Container maxWidth="lg" sx={{ height: "100vh" }}>
-      <BrowserRouter>
-        <MyHeader></MyHeader>
-        <Outlet />
-        <Routes>
-          <Route
-            path="/"
-            element={<ButtonGrid />}
-          />
-          <Route
-            path="/page2"
-            element={<MyForm />}
-          />
-          <Route
-            path="/page3"
-            element={<Page3 />}
-          />
-        </Routes>
-      </BrowserRouter>
+      <Container
+        maxWidth="lg"
+        sx={{ height: "100vh" }}
+      >
+        <BrowserRouter>
+          <MyHeader></MyHeader>
+          <Outlet />
+          <Routes>
+            <Route
+              path="/"
+              element={<ButtonGrid />}
+            />
+            <Route
+              path="/page2"
+              element={<MyForm />}
+            />
+            <Route
+              path="/page3"
+              element={<Page3 />}
+            />
+          </Routes>
+        </BrowserRouter>
       </Container>
     </div>
   )

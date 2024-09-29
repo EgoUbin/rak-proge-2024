@@ -8,7 +8,9 @@ export default function ButtonGrid() {
       sx={{ flexGrow: 1 }}
       bgcolor={"#282c24"}
     >
-      <Grid container spacing={2}
+      <Grid
+        container
+        spacing={2}
       >
         <Grid size={6}>
           <ButtonUsage></ButtonUsage>
